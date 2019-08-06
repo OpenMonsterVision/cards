@@ -54,6 +54,12 @@ func (d *Deck) shuffle() {
 		d.cards[i], d.cards[j] = d.cards[j], d.cards[i]
 	})
 }
+func (d *Deck) split() (d1, d2 Deck) {
+	d1.cards = d.cards[:26]
+	d2.cards = d.cards[26:]
+	return
+
+}
 
 var suits = []Suit{
 	{name: "Spades", color: "black"},
@@ -65,6 +71,9 @@ func main() {
 	fmt.Println(suits)
 	var D Deck
 	D.generate()
-	fmt.Println(D)
-	fmt.Println(len(D.cards))
+	p1, p2 := D.split()
+	//	fmt.Println(p1)
+	//	fmt.Println(p2)
+	//	fmt.Println(len(p1.cards))
+	//	fmt.Println(len(p2.cards))
 }
