@@ -61,6 +61,15 @@ func (d *Deck) split() (d1, d2 Deck) {
 
 }
 
+func challenge() {
+	if 1 > 2 {
+
+	} else if 1 < 2 {
+	} else {
+
+	}
+}
+
 var suits = []Suit{
 	{name: "Spades", color: "black"},
 	{name: "Hearts", color: "red"},
@@ -72,8 +81,4 @@ func main() {
 	var D Deck
 	D.generate()
 	p1, p2 := D.split()
-	//	fmt.Println(p1)
-	//	fmt.Println(p2)
-	//	fmt.Println(len(p1.cards))
-	//	fmt.Println(len(p2.cards))
 }
